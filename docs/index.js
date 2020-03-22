@@ -80,7 +80,7 @@ let validarCampos = () => {
                 msgCapcha.text("Campo requerido ");
                 capcha.focus();
                 return false;
-        }else if(capcha.val().toUpperCase().trim() != texto.val()){
+        }else if(capcha.val().toUpperCase().trim() != texto.val().toUpperCase().trim()){
                 
                 msgCapcha.text("Valores no coinciden ");                        
                 capcha.val("");
