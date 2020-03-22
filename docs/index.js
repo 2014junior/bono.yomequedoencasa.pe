@@ -46,7 +46,6 @@ let validarCampos = () => {
                 return false;
         } else {
                 msgDni.text("");
-                // return true;
         }
         
         if(!dia.val()){
@@ -55,7 +54,6 @@ let validarCampos = () => {
                 return false;
         } else {
                 msgDia.text("");
-                // return true;
         }
         
         if(!mes.val()){
@@ -64,7 +62,6 @@ let validarCampos = () => {
                 return false;
         } else {
                 msgMes.text("");
-                // return true;
         }
         
         if(!anio.val()){
@@ -83,20 +80,19 @@ let validarCampos = () => {
                 msgCapcha.text("Campo requerido ");
                 capcha.focus();
                 return false;
-        }else if(capcha.val().toUpperCase().trim() != 'NAPO'){
-                // msgCapcha.text("");
+        }else if(capcha.val().toUpperCase().trim() != texto.val()){
+                
                 msgCapcha.text("Valores no coinciden ");                        
                 capcha.val("");
+                texto.val(rand_code(caracteres,longitud))
                 return false;
         }else{
                 msgCapcha.text("");
-                // return true;
         }
         return true;
 }
 
 $("#generarCodigo").click(function(){
-        
         let codigo = rand_code(caracteres, longitud);
         texto.val(codigo);
 })  
