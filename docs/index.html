@@ -2,23 +2,128 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assetes/bootstrap/css/bootstrap.min.css" />
+    <link rel="icon" type="image/ico" href="ss.ico" />
 
-    <title>My site</title>
+    <title>YoMeQuedoEnCasa</title>
+    <script src="assetes/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="icons/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="alert alert-primary" role="alert">
-        hi jade how are you.
+    <div class="container">
+        <div class="card" >
+          <div class="btn btn-danger" style="background-color: red;">
+            <br>
+            <div class="row">
+              <div class="col-sm-8"></div>
+              <div class="col-sm-4">
+                <p><i class="fa fa-clock ml-auto"></i>Tiempo de sesión <span id="time">80</span> segundos</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-sm-6">
+                    <img src="bono_peru.png" width="550px" alt="">
+                  </div>
+                  <hr>
+                  <div class="col-sm-6">
+                      <div class="row">
+                        
+                          <div class="col-sm-2">&nbsp;</div>
+                          <div class="col-sm-8 btn btn-danger" role="alert">
+                              
+                              <input type="hidden" id="valueCont" value="">
+                              <p>CONSULTA AQUÍ TU SUBSIDIO MONETARIO</p>
+                          </div>
+                      </div>
+                      <br>
+                      <span id="msgTrue" style="color: green;"></span>
+                      <span id="msgFalse" style="color: red;"></span>
+                       <form action="">
+
+                         <div class="form-group">
+                            <div class="row">
+                              <div class="col-sm-2">
+                                &nbsp;
+                              </div>
+                              <div class="col-sm-8">
+                                  <input type="text" id="dni" class="form-control "  aria-describedby="Dni" placeholder="Ingrese su DNI" autocomplete="off" maxlength="8">
+                                  <div><span id="msgDni" style="color: red;"></span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2">&nbsp;</div>
+                            <div class="col-sm-8">
+                              <label for="" class="text-align-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INGRESE SU FECHA DE NACIMIENTO</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group col-sm-4">
+                                <input type="text" id="dia" class="form-control"  aria-describedby="dia" placeholder="Día" autocomplete="off">
+                                <div><span id="msgDia" style="color: red;"></span></div>
+                             </div>
+                             <div class="form-group col-sm-4">
+                                  <input type="text" id="mes" class="form-control"  aria-describedby="mes" placeholder="mes" autocomplete="off">
+                                  <div><span id="msgMes" style="color: red;"></span></div>
+                              </div>
+                              <div class="form-group col-sm-4">
+                                  <input type="text" id="anio" class="form-control"  aria-describedby="anio" placeholder="Año" autocomplete="off" maxlength="4">
+                                  <div><span id="msgAnio" style="color: red;"></span></div>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-2">
+                              &nbsp;
+                            </div>
+                            <div class="col-sm-8 form-group">
+                              <input type="text" id="capcha" class="form-control "  placeholder="INGRESE TEXTO DE LA IMAGEN" autocomplete="off">
+                              <div><span id="msgCapcha" style="color: red;"></span></div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-3">&nbsp;</div>
+                            <div class="col-sm-6 input-group mb-3">
+                              <input type="text" id="texto" class="form-control" value="" aria-describedby="button-addon2" readonly>
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="generarCodigo"><i class="fa fa-sync-alt"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4">
+
+                            </div>
+                            <div class="col-sm-6" style="text-align: center;">
+                              <a class="btn btn-success" id="consultar" href="#">Consultar</a>
+                            </div>
+                          </div>
+                        </form>
+                  </div>
+              </div>
+          
       </div>
+      <div class="card-footer" style="background-color: red;">
+         <br>
+         <br>
+      </div>
+      </div>
+     
+        </div>
+    </div>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <script src="assetes/bootstrap/js/bootstrap.min.js" ></script>
   </body>
 </html>
